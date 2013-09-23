@@ -21,7 +21,7 @@ __END__
 =head1 NAME
 
 Devel::GDB::Breakpoint - Create easily identifiable gdb breakpoints in Perl code
-for use with gdb
+for use with gdb.
 
 =head1 SYNOPSIS
 
@@ -88,7 +88,7 @@ Which allows you in gdb to set breakpoints like so:
 
 I'm really not sure you would.
 
-But I think it's useful if you want to break at different points in a large 
+But it may be useful if you want to break at different points in a large 
 program and don't want to maintain a list of Perl_pp_* methods you haven't used 
 yet to create unique breakpoints.
 
