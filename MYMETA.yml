@@ -1,5 +1,5 @@
 ---
-abstract: 'Create easily identifiable breakpoints in Perl code '
+abstract: 'Create easily identifiable gdb breakpoints in Perl code'
 author:
   - 'Matthew Horsfall (alh) <wolfsage@gmail.com>'
 build_requires:
