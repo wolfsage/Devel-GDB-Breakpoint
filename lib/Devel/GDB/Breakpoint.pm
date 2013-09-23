@@ -20,9 +20,7 @@ __END__
 
 =head1 NAME
 
-Devel::GDB::Breakpoint - Create easily identifiable gdb breakpoints in Perl code
-for use with gdb.
-
+Devel::GDB::Breakpoint - Create easily identifiable gdb breakpoints in Perl code.
 =head1 SYNOPSIS
 
 In some Perl program (prog.pl):
