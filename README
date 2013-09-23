@@ -1,14 +1,42 @@
 Devel-GDB-Breakpoint version 0.01
 =================================
 
-INSTALLATION
+SYNOPSIS:
 
-To install this module type the following:
+In some Perl program (prog.pl):
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+    #!/usr/bin/perl
+
+    use strict;
+    use warnings;
+
+    use Devel::GDB::Breakpoint;
+
+    print "before\n";
+
+    breakpoint 42;
+
+    print "after\n";
+
+  Then:
+
+    $ gdb --args perl ./prog.pl
+    ...
+
+    (gdb) b bp if val == 42
+    Function "bp" not defined.
+    Make breakpoint pending on future shared library load? (y or [n]) y
+
+    Breakpoint 1 (bp if val == 42) pending.
+    (gdb) run
+    Starting program: /usr/bin/perl prog.pl
+    [Thread debugging using libthread_db enabled]
+    before
+
+    Breakpoint 1, bp (val=42) at Breakpoint.xs:7
+    7       void bp(int val) {}
+    (gdb)
+
 
 COPYRIGHT AND LICENCE
 
