@@ -9,4 +9,5 @@ WriteMakefile(
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Devel/GDB/Breakpoint.pm', # retrieve abstract from module
        AUTHOR         => 'Matthew Horsfall (alh) <wolfsage@gmail.com>') : ()),
+    OPTIMIZE          => '-g',
 );
