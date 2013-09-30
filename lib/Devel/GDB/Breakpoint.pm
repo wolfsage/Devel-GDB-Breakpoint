@@ -91,6 +91,29 @@ But it may be useful if you want to break at different points in a large
 program and don't want to maintain a list of Perl_pp_* methods you haven't used 
 yet to create unique breakpoints.
 
+Alternatively, in Perl you can:
+
+  study;
+
+And then in gdb:
+
+  (gdb) b Perl_pp_study
+
+If you want to break during parsing, you can:
+
+  BEGIN { breakpoint 5; }
+
+Or
+
+  BEGIN { study; }
+
+If you want to break during parsing inside of if blocks and other places 
+however, see L<Devel::GDB::Parser::Breakpoint>.
+
+=head1 SEE ALSO
+
+L<Devel::GDB::Parser::Breakpoint> - Create easily identifiable gdb breakpoints in Perl parser code.
+
 =head1 AUTHOR
 
 Matthew Horsfall (alh) - <wolfsage@gmail.com>
