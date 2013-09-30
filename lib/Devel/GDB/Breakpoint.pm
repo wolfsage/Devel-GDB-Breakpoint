@@ -2,7 +2,7 @@ package Devel::GDB::Breakpoint;
 use 5.006000;
 
 BEGIN {
-	$Devel::GDB::Breakpoint::VERSION = '0.01';
+	$Devel::GDB::Breakpoint::VERSION = '0.02';
 }
 
 use strict;
